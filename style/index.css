@@ -1,0 +1,201 @@
+*{
+	margin: 0;
+}
+@font-face {
+    font-family: "方正小标宋简";
+    src: url("Fonts/方正小标宋简.TTF") format('truetype');
+}
+@font-face {
+    font-family: "仿宋_GB2312";
+    src: url("Fonts/仿宋_GB2312.ttf") format('truetype');
+}
+@keyframes changeBackground {
+    0% {background-image: url("../img/background1.png");}
+    8% {background-image: url("../img/background1.png");}
+    9% {background-image: url("../img/background2.png");}
+    16% {background-image: url("../img/background2.png");}
+    17% {background-image: url("../img/background3.png");}
+    24% {background-image: url("../img/background3.png");}
+    25% {background-image: url("../img/background4.png");}
+    32% {background-image: url("../img/background4.png");}
+    33% {background-image: url("../img/background5.png");}
+    40% {background-image: url("../img/background5.png");}
+    41% {background-image: url("../img/background6.png");}
+    48% {background-image: url("../img/background6.png");}
+    49% {background-image: url("../img/background7.png");}
+    56% {background-image: url("../img/background7.png");}
+    57% {background-image: url("../img/background8.png");}
+    64% {background-image: url("../img/background8.png");}
+    65% {background-image: url("../img/background9.png");}
+    72% {background-image: url("../img/background9.png");}
+    73% {background-image: url("../img/background10.png");}
+    80% {background-image: url("../img/background10.png");}
+    81% {background-image: url("../img/background11.png");}
+    88% {background-image: url("../img/background11.png");}
+    89% {background-image: url("../img/background12.png");}
+    100% {background-image: url("../img/background12.png");}
+}
+#title {
+    color: #ff0000; /* 设置颜色为红色 */
+    font-family: "方正小标宋简", Arial, sans-serif; /* 设置字体为"方正小标宋简"，如果不可用，则使用Arial或sans-serif */
+}
+
+#label-bars, #label-delay {
+    color: #ff0000; /* 设置颜色为红色 */
+	font-family: "仿宋_GB2312", Arial, sans-serif;/* 设置字体为"仿宋_GB2312"，如果不可用，则使用Arial或sans-serif */
+}
+
+#container{
+	display: flex;
+	margin: 0 auto;
+	width: intrinsic;           
+  	width: -moz-max-content;   
+ 	width: -webkit-max-content;
+	height: 60%;
+	background-color: rgba(255, 255, 255, 0.5);/*透明度*/
+}
+#comparisonCount {
+    font-size: 20px; /* 设置字体大小 */
+	font-family: "仿宋_GB2312", Arial, sans-serif;
+    color: #ff0000; /* 设置字体颜色 */
+    margin: 20px 5; /* 设置上下外边距为20px，左右外边距为0 */
+    font-weight: bold; /* 设置字体为粗体 */
+    text-align: center; /* 设置文本居中显示 */
+    position: absolute; /* 使用绝对定位 */
+    left: 0; /* 设置到页面的左侧 */
+    top: 50%; /* 设置到顶部的距离为50%，即在垂直方向上居中 */
+    transform: translateY(-50%); /* 使用transform向上移动元素自身高度的50%，以确保完全居中 */
+}
+#timeComplexity {
+	font-size: 20px; /* 设置字体大小 */
+	font-family: "仿宋_GB2312", Arial, sans-serif;
+    color: #ff0000; /* 设置字体颜色 */
+    margin: 20px 5; /* 设置上下外边距为20px，左右外边距为0 */
+    font-weight: bold; /* 设置字体为粗体 */
+    text-align: center; /* 设置文本居中显示 */
+    position: absolute; /* 使用绝对定位 */
+    left: 0; /* 设置到页面的左侧 */
+	top: 90%;
+    transform: translateY(-50%); /* 使用transform向上移动元素自身高度的50%，以确保完全居中 */
+}
+#b{
+	display: inline-block;
+	margin-left: 1vw;
+	width: 1vw;
+	color: #ff0000;
+	font-family: "仿宋_GB2312", Arial, sans-serif;/* 设置字体为"仿宋_GB2312"，如果不可用，则使用Arial或sans-serif */
+}
+
+#d{
+	display: inline-block;
+	margin-left: 1vw;
+	width: 1vw;
+	color: #ff0000;
+	font-family: "仿宋_GB2312", Arial, sans-serif;/* 设置字体为"仿宋_GB2312"，如果不可用，则使用Arial或sans-serif */
+}
+#bars, #delay{
+	vertical-align: middle;
+}
+
+.header{
+	display: flex;
+	flex-wrap: wrap;
+	font-weight: bold;
+	background-color: #4300fd;
+	margin: 0;
+	color: white;
+	padding: 1vw 1vw 2vw 1vw;
+	margin-bottom: 2vw;
+	background-color: rgba(255, 255, 255, 0.1);/*透明度*/
+}
+h1{
+    font-size: 3vw;
+	font-family: "方正小标宋简", Arial, sans-serif; /* 设置字体为"方正小标宋简"，如果不可用，则使用Arial或sans-serif */
+    font-weight: lighter;
+    /* width: 40%; */
+    text-align: center;
+	margin-top: 20px; /* 设置上外边距为20px */
+}
+.range{
+	justify-content: space-evenly;
+	display: flex;
+	flex-wrap: wrap;
+	flex-flow: wrap;
+}
+.slide{
+	margin: 0vw 1vw;
+}
+.bar{
+	position: relative;
+	border: 0.05vw solid black;
+	width:0.6vw;
+	margin:0.1vw;
+	background-color: #fd0081;
+}
+.bar-value {
+    position: absolute; /* 绝对定位 */
+    bottom: -1vw; /* 根据需要调整，确保在条形图下方显示 */
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+    /* 其他样式，如字体大小、颜色等 */
+	color: black;
+	font-size: 0.8vw;
+}
+.hidden {
+    display: none;
+}
+.sorts{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.vars{
+	width: 60%;
+	align-self: flex-start;
+	text-align: center;
+	font-size: 1.3vw;
+	font-family: sans-serif;
+}
+input[type="button"] {
+	margin: 1.5vw 0.5vw;
+}
+input[type="button"]:hover, button:hover{
+	background-color: #f8a7a7;
+	cursor: pointer;
+	color: #1200a4;
+}
+input[type="button"]:disabled, input[type="range"]:disabled{
+	background-color: #ffffff;
+	cursor: not-allowed;
+	color: blue;
+}
+input[type="button"], button{
+	background: white;
+	border: none;
+	padding: 1.3vh;
+	border-radius: 9vw;
+	min-width: 8vw;
+	color: rgb(6, 6, 223);
+	font-size: 1.2vw;
+}
+/* logo container */
+.logo-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.logo-container img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+/*背景*/
+body {
+    /* background-image: url('../img/background3.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	animation: changeBackground 40s linear infinite;/*背景动画*/
+}

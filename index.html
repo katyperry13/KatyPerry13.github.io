@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>排序算法交互可视化教学平台</title>
+	<link rel="stylesheet" type="text/css" href="style/index.css">
+</head>
+
+<body>
+	<div class="header">
+		<h1 id="title">排序算法交互可视化教学平台</h1>
+		<div class="vars">
+			<div class="range">
+				<div class="slide"><label for="bars" id="label-bars">数组大小</label> : <input id="bars" type="range" name="bars"
+						min="1" max="100" value="50" oninput="setup()" onchange="setup()">
+					<span id="b"> </span></div>
+				<div class="slide"><label for="delay" id="label-delay">速度</label> : <input id="delay" type="range" name="delay"
+						min="0" max="1000" value="500" oninput="setup()" onchange="setup()">
+					<span id="d"></span></div>
+			</div>
+			<div class="sorts">
+				<input type="button" onclick="SelectionSort(); playAudio('SelectionSort.mp3');" value="选择排序">
+    			<input type="button" onclick="BubbleSort(); playAudio('BubbleSort.mp3');" value="冒泡排序">
+    			<input type="button" onclick="InsertionSort(); playAudio('InsertionSort.mp3');" value="插入排序">
+    			<input type="button" onclick="MergeSort(); playAudio('MergeSort.mp3');" value="归并排序">
+    			<input type="button" onclick="QuickSort(); playAudio('QuickSort.mp3');" value="快速排序">
+    			<input type="button" onclick="HeapSort(); playAudio('HeapSort.mp3');" value="堆排序"><br><br>
+			</div>
+			<button onclick="reset()">生成新数组</button>
+			<button onclick="toggleAudio()">暂停/播放介绍</button>
+			<button onclick="toggleBeep()">开启/关闭蜂鸣声</button>
+			<button id="toggleValues" onclick="toggleBarValues()">显示/隐藏值</button>
+		</div>
+	</div>
+	<div id="comparisonCount">比较次数: 0</div>
+	<div id="timeComplexity">时间复杂度: N/A</div>
+	<div id="container">
+	</div>
+	<div class="logo-container">
+		<img src="img/EOC.png" alt="logo1">
+		<img src="img/tencent shuangshi.png" alt="logo2">
+	</div>
+	<script src="App/beep.js"></script>
+	<script src="App/script.js"></script>
+</body>
+
+</html>
